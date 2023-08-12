@@ -12,7 +12,17 @@ body{
     width: 100vw;
     height: 100vh;    
 }
-
+.freebut{
+    margin-left: 5vw;
+    margin-right: auto;
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 15px 35px 15px 35px;
+    font-size: 25px;
+    border-radius: 20px;
+    letter-spacing: 5px;
+}
 .star{
     margin-top: 30px;
 }
@@ -917,7 +927,7 @@ background: linear-gradient(117deg, rgba(78,61,255,0.9038209033613446) 26%, rgba
     width: 40vw;
     line-height: 1.4;
     opacity: .7;
-    margin-bottom: 400px;
+    margin-bottom: 75px;
    text-align: left;
    margin-left: 5vw;
    letter-spacing: 1px;
