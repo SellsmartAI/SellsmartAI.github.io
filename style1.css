@@ -1209,6 +1209,9 @@ padding-bottom: 100px;
         height: auto;
         margin-bottom: 20px;
     }
+    #specialh1{
+        width: 90%;
+    }
     .easytext{
         text-align: center;
         width: 80%;
