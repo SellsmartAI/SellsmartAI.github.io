@@ -1015,7 +1015,7 @@ h2{
 }
 .start{
     margin: 0;
-    height: 80vh;
+    height: auto;
     background: rgb(255,255,255);
 background: linear-gradient(180deg, rgba(255,255,255,0.6965379901960784) 26%, rgba(0,212,255,0.702140231092437) 100%);
 padding-bottom: 100px;
@@ -1051,6 +1051,9 @@ padding-bottom: 100px;
 }
 @media only screen and (max-width: 600px) {
     .toplink{
+        display: none;
+    }
+    #alwaysthere{
         display: none;
     }
     .offertext{
