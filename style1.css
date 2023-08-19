@@ -934,6 +934,20 @@ background: linear-gradient(117deg, rgba(78,61,255,0.9038209033613446) 26%, rgba
    font-size: 24px;
    
 }
+.downtext1{
+    width: 40vw;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 75px;
+   text-align: left;
+   margin-left: 5vw;
+   letter-spacing: 1px;
+   font-size: 24px;
+   display: inline-block;
+   align-items: top;
+   vertical-align: top;
+  text-align: center;
+}
 
 h2{
     font-family: Arial, Helvetica, sans-serif;
