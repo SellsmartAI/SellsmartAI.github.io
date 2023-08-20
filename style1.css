@@ -26,6 +26,17 @@ body{
 .star{
     margin-top: 30px;
 }
+.allthatforfree{
+    background-color: grey;
+    color: white;
+    padding: 0px;
+    width: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    position: relative;
+    top: -40px;
+}
 .bottomlink{
     color: black;
     margin-top: 50px;
