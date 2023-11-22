@@ -22,6 +22,7 @@ body{
     font-size: 25px;
     border-radius: 20px;
     letter-spacing: 5px;
+    text-decoration: none;
 }
 .star{
     margin-top: 30px;
