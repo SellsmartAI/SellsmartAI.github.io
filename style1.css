@@ -1142,11 +1142,11 @@ padding-bottom: 100px;
         display: block;
     }
     .emb{
-        display: none;
+        
         width: 90vw;
         margin-left: auto;
         margin-right: auto;
-        height: 90vh;
+        height: 70vh;
     }
     .animg{
         width: 80%;
