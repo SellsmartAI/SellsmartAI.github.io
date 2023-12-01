@@ -1168,13 +1168,14 @@ padding-bottom: 100px;
     }
     embed{
         animation-name: embedanimation;
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-        right: initial;
-        left: 20px;
-        animation-duration: 500ms;
-        border: none;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    right: initial;
+    right: 5px;
+    animation-duration: 500ms;
+    border: none;
+    bottom: 5px;
         
 
     }
