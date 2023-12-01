@@ -12,17 +12,53 @@ body{
     width: 100vw;
     height: 100vh;    
 }
+.uimg{
+    display: inline-block;
+    width: 20vw;
+    border-radius: 10px;
+    margin: 30px;
+}
+.newsection{
+    background-color: none;
+    border-top: 1px solid black;
+    padding-bottom: 50px;
+}
+.uschrift{
+    font-size: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20vw;
+    text-align: center;
+    padding: 0px;
+    color: #464646;
+    margin-top: 100px;
+}
+.head3{
+    font-size: 60px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    color: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: initial;
+    background: initial;
+    display: block;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+}
 .freebut{
     margin-left: 5vw;
     margin-right: auto;
     display: block;
-    background-color: black;
+    background-color: rgb(76,76,76);
     color: white;
     padding: 15px 35px 15px 35px;
     font-size: 25px;
     border-radius: 20px;
     letter-spacing: 5px;
     text-decoration: none;
+    padding-top: 12px;
 }
 .star{
     margin-top: 30px;
@@ -921,12 +957,14 @@ p{
 h1{
     width: 60vw;
     margin-top: 30vh;
-    margin-left: 5vw;
+    margin-left: auto;
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 70px;
-    text-align: left;
+    text-align: center;
     letter-spacing: 0.5px;
+    margin-right: auto;
+
 }
 
 f{
@@ -937,14 +975,16 @@ background: linear-gradient(117deg, rgba(78,61,255,0.9038209033613446) 26%, rgba
 }
 .downtext{
     width: 40vw;
+   
     line-height: 1.4;
     opacity: .7;
     margin-bottom: 75px;
-   text-align: left;
-   margin-left: 5vw;
-   letter-spacing: 1px;
-   font-size: 24px;
-   
+    text-align: center;
+    margin-left: auto;
+    letter-spacing: 1px;
+    font-size: 24px;
+    margin-right: auto;
+    font-size: 20px;
 }
 .downtext1{
     width: 40vw;
@@ -1151,7 +1191,7 @@ padding-bottom: 100px;
 
     }
     input{
-        font-size: 30px;
+        font-size: 18px;
         display: block;
         margin-left: auto;
         margin-right: auto;
