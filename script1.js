@@ -17,6 +17,27 @@ console.log = function() {}
 
 check();
 
+document.getElementById("openButton").addEventListener('click', function(){
+  showChatbot();
+});
+
+function showChatbot(){
+  document.getElementById("chatbot").classList.remove("none");
+ 
+  document.getElementById("openButton").classList.add("none");
+  document.getElementById("closeButton").classList.remove("none");
+}
+
+document.getElementById("closeButton").addEventListener('click', function(){
+  hideChatbot();
+});
+
+function hideChatbot(){
+  document.getElementById("chatbot").classList.add("none");
+  document.getElementById("closeButton").classList.add("none");
+  document.getElementById("openButton").classList.remove("none");
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   // Your code here
 
@@ -369,8 +390,7 @@ function deactivateCustomiser(){
 
 }
 function check(){
-screensize = screen.width;
-  /*if(window.innerWidth < 600){
-    disableChat();
-  }*/
+  if(screen.width < 600){
+    hideChatbot();
+  }
 }

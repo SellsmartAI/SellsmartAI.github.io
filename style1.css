@@ -12,6 +12,35 @@ body{
     width: 100vw;
     height: 100vh;    
 }
+
+#openButton{
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(76,76,76);
+    border-radius: 15px;
+    width: 70px;
+    height: 50px;
+}
+#closeButton{
+    display: block;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    padding: 10px;
+    border: none;
+    background-color: rgb(208, 170, 170);
+    border-radius: 15px;
+    width: 70px;
+    height: 50px;
+}
+#openImage{
+    width: 30px;
+    height: 30px;
+}
 .uimg{
     display: inline-block;
     width: 20vw;
@@ -201,7 +230,7 @@ font-weight: 600;
     color: #1d00c1;
 }
 .none{
-    display: none;
+    display: none !important;
 }
 .splt{
     display: inline-block;
@@ -803,7 +832,7 @@ header{
 #testEmb{
     display: block;
 }
-embed{
+iframe{
     opacity: 1; /* set initial opacity to 1 */
     position: fixed;
     bottom: 20px;
@@ -811,6 +840,17 @@ embed{
     transition: opacity 0.2s ease-in-out;
     overflow-y: hidden;
     z-index: 10;
+    height: 70vh;
+  }
+  embed{
+    opacity: 1; /* set initial opacity to 1 */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: opacity 0.2s ease-in-out;
+    overflow-y: hidden;
+    z-index: 10;
+    height: 70vh;
   }
 @keyframes head2 {
     0%{position: relative; right: 500px;}
@@ -1127,7 +1167,7 @@ padding-bottom: 100px;
 }
 .emb{
     display: block;
-    height: 620px;
+    height: auto;
 }
 @media only screen and (max-width: 600px) {
     .toplink{
@@ -1150,14 +1190,19 @@ padding-bottom: 100px;
     }
     .emb{
         
-        width: 90vw;
+        width: 10vw;
         margin-left: auto;
         margin-right: auto;
-        height: 70vh;
+        height: 10vh;
     }
     .animg{
         width: 80%;
         margin-top: 40px;
+    }
+    #closeButton{
+        top: 7px;
+        right: 7px;
+        scale: 0.8;
     }
     .callChat{
         width: 50px;
@@ -1211,6 +1256,7 @@ padding-bottom: 100px;
 
 
     }
+    
     .ctamobile{
         margin-left: 5vw;
         margin-right: auto;

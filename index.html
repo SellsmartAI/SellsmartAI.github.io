@@ -7,7 +7,13 @@
         <meta name="description" content="KI Shopping Assistent von Sellsmart. ">
         <link rel="icon" type="image/x-icon" href="/Assets/favicon.ico">
         <title>Sellsmart Chatbot</title>
-    </script>
+        <script>
+            function resizeIframe(obj) {
+                console.log("REFRAMMMINGGG");
+              obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+            }
+          </script>
+ 
     </head>
     <body id="content">
       
@@ -128,7 +134,9 @@
             <p class="downtext">Schnellerer Kundensupport, mehr Leads, höhere Conversion Rate, bessere Kundenbindung.</p>
             <a class="ctamobile" href="getbot.html" >Warteliste &rarr;</a>
             <a class="freebut" href="getbot.html" style="position: fixed; top: 20px; right: 20px; " id="alwaysthere">&rarr;</a>
-            <embed type="text/html" src="https://vorschau.vercel.app" id="embeded" class="emb">
+            <embed id="chatbot" class="nomobilestart" src="http://localhost:5173" width="auto" height="auto" frameborder="no">
+            <button  type="button" id="openButton" class="none"><img id="openImage" src="assets/bubble-chat.png" alt="openChatbot" />
+            <button  type="button" id="closeButton"><img id="openImage" src="assets/NoChat.png" alt="openChatbot" />
 
                 
           
