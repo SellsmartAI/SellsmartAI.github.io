@@ -1,6 +1,6 @@
 openai_test()
 
-
+console.log = function() {}
 window.onload = function() {       
   setTimeout(function(){
     createAIBlock("Hey, it's great to see you! 👋'")

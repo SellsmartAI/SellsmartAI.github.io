@@ -13,14 +13,13 @@ let finalInputfield = document.getElementById("showinputfield");
 let screensize = 0;
 let maxwidth = 600;
 
-console.log("Hey I am a test");
+console.log = function() {}
+
 check();
-console.log(screensize);
+
 document.addEventListener('DOMContentLoaded', function() {
   // Your code here
-console.log("Checking for server");
-console.log("NASA searching...");
-console.log("NASA hacked.. searching for documents..");
+
 
 document.addEventListener('scroll', function() {
 
@@ -31,11 +30,11 @@ document.addEventListener('scroll', function() {
 
 var percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
 
-console.log(percent);
+
   if(window.innerWidth > 500){
    
     if (percent >= 8 && percent <= 20 || percent > 95) {
-      console.log("Is between the %"); // show fixed div between 30% and 70% scroll position
+
       document.getElementById('embeded').classList.add('unvisible');
     } else {
       document.getElementById('embeded').classList.remove('unvisible');
@@ -88,7 +87,7 @@ function deactivateAll(){
   }
 }
 function closeoverlap(){
-  console.log("pressed close button");
+  
   document.getElementById("overlap").classList.add("novis");
   document.getElementById("embeded").style.display ="none";
 } 
@@ -159,7 +158,7 @@ function updateColorValues(){
   //App background
   let elemente = document.getElementsByClassName("app");
   var color = document.getElementById("picker1").value;
-  console.log("Updating values, color: " + color);
+ 
   if (elemente.length > 0) {
     elemente[0].style.background = color;
     endColVal1 = color;
@@ -167,7 +166,6 @@ function updateColorValues(){
   //Chat background
   let elemente2 = document.getElementsByClassName("chatfield");
   var color = document.getElementById("picker2").value;
-  console.log("Updating values, color: " + color);
   
   for(let i = 0; i < elemente2.length; i++){
     elemente2[i].style.background = color;
@@ -182,7 +180,6 @@ function updateColorValues(){
   //Input field background
   let elemente3 = document.getElementsByClassName("inputfield");
   var color = document.getElementById("picker3").value;
-  console.log("Updating values, color: " + color);
   
   for(let i = 0; i < elemente3.length; i++){
     elemente3[i].style.background = color;
@@ -208,7 +205,6 @@ function calcPrice(){
 
 
 
-  console.log("WE are calculating the price");
   let toShow = document.getElementById("willshow");
   
   
@@ -222,45 +218,37 @@ function calcPrice(){
   let recommendpr = 0;
 
   if(selecter1.value == "0"){
-    console.log("1000 chats a day selected");
-    price+=00;
+    price+=0;
     chatsVal = 0;
   }
   else if(selecter1.value == "1"){
-    console.log("3000 chats a day selected");
     price+= 60;
     chatsVal = 1;
   }
   else if(selecter1.value == "2"){
-    console.log("12.500 chats a day selected");
     price+=210;
     chatsVal = 2;
   }
 
   if(selecter2.value == "0"){
-    console.log("Does not want a customer page");
     price+=0;
     custompage = 0;
   }
   else if(selecter2.value == "1"){
-    console.log("Wants customer page");
     price+=15;
     custompage = 1;
   }
 
   if(selecter3.value == "0"){
-    console.log("Should not recommend products");
-    price+=00;
+    price+=0;
     recommendpr = 0;
   }
   else if(selecter3.value == "1"){
-    console.log("Should recommend products");
     price+=15;
     recommendpr = 1;
   }
   const timer = ms => new Promise(res => setTimeout(res, ms));
   const timer2 = ms => new Promise(res => setTimeout(res, ms));
-console.log("This is your monthly price: " + price.toString());
   //Start an calculation animation
 for(let i = 0; i < 7; i++){
   setTimeout(function timer2(){
@@ -381,7 +369,6 @@ function deactivateCustomiser(){
 
 }
 function check(){
-  console.log("Client width: " + window.innerWidth)
 screensize = screen.width;
   /*if(window.innerWidth < 600){
     disableChat();
