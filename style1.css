@@ -355,9 +355,7 @@ background: linear-gradient(to right,  rgb(66 171 203),  rgb(58 165 183),      r
 }
 .offmobile{
     display: inline-block;
-    width: 20vw;
-    border-radius: 10px;
-    margin: 30px;
+   
 }
 .offpc{
     display: none;
@@ -1509,7 +1507,7 @@ padding-bottom: 100px;
         display: none;
     }
     .offmobile{
-        display: none;
+        display: none !important;
     }
     #alwaysthere{
         display: none;
