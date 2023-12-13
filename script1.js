@@ -3,6 +3,7 @@ const fixedDiv = document.getElementById('embeded');
 const embededthing = document.getElementById('embeded');
 const buttontrigger = document.getElementById('caller');
 
+
 let endColVal1 = "";
 let endColVal2 = "";
 let endColVal3 = "";
@@ -16,6 +17,58 @@ let maxwidth = 600;
 console.log = function() {}
 
 check();
+
+
+let index = 0,
+    interval = 1000;
+
+const rand = (min, max) => 
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+const animate = star => {
+  star.style.setProperty("--star-left", `${rand(-10, 100)}%`);
+  star.style.setProperty("--star-top", `${rand(-40, 80)}%`);
+
+  star.style.animation = "none";
+  star.offsetHeight;
+  star.style.animation = "";
+}
+
+for(const star of document.getElementsByClassName("magic-star")) {
+  setTimeout(() => {
+    animate(star);
+    
+    setInterval(() => animate(star), 1000);
+  }, index++ * (interval / 3))
+}
+
+/* -- ↓↓↓ If you want the sparkle effect to only occur on hover, replace lines 16 and on with this code ↓↓↓ -- */
+
+// let timeouts = [],
+//     intervals = [];
+
+// const magic = document.querySelector(".magic");
+
+// magic.onmouseenter = () => {
+//   let index = 1;
+  
+//   for(const star of document.getElementsByClassName("magic-star")) {
+//     timeouts.push(setTimeout(() => {  
+//       animate(star);
+      
+//       intervals.push(setInterval(() => animate(star), 1000));
+//     }, index++ * 300));
+//   };
+// }
+
+// magic.onmouseleave = onMouseLeave = () => {
+//   for(const t of timeouts) clearTimeout(t);  
+//   for(const i of intervals) clearInterval(i);
+  
+//   timeouts = [];
+//   intervals = [];
+// }
+
 
 document.getElementById("openButton").addEventListener('click', function(){
   showChatbot();
@@ -38,46 +91,12 @@ function hideChatbot(){
   document.getElementById("openButton").classList.remove("none");
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Your code here
 
-
-document.addEventListener('scroll', function() {
-
-  var h = document.documentElement, 
-  b = document.body,
-  st = 'scrollTop',
-  sh = 'scrollHeight';
-
-var percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
-
-
-  if(window.innerWidth > 500){
-   
-    if (percent >= 8 && percent <= 20 || percent > 95) {
-
-      document.getElementById('embeded').classList.add('unvisible');
-    } else {
-      document.getElementById('embeded').classList.remove('unvisible');
-    }
-  }
-  var target = document.querySelector('.staffcost');
-    var targetPosition = target.getBoundingClientRect().top;
-    var screenPosition = window.innerHeight;
-
-    if (targetPosition < screenPosition) {
-        setTimeout(function() {
-            target.classList.add('underline-visible');
-        }, 500); // Add a delay of 200 milliseconds before adding the class
-    }
-  
-});
-});
 
 //GOOGLE CHART API START
 
 //GOOGLE CHART API END
-function overlapchatbot(){
+/*function overlapchatbot(){
   document.getElementById("overlap").classList.remove("novis");
   document.getElementById("embeded").style.display ="block";
 }
@@ -86,11 +105,7 @@ function overlapchatbot(){
 let customiserel = document.getElementById("customiser");
 let stickybutton = document.getElementById("quitbutton");
 
-function updateButtonPosition(){
-  /*console.log("Customiser left: " + customiserel.style.left);
-  stickybutton.style.left = customiserel.style.left + customiserel.style.width + "vw";
-  stickybutton.style.top = customiserel.style.top + "vh";*/
-}
+
 function deactivateAll(){
   if(screensize > maxwidth){
     document.getElementById("customiser").classList.add("novis");
@@ -131,7 +146,7 @@ function openSecondDiv(){
   //customiser.style.top ="0vh";
   /*setTimeout(function() {
     customiser.style.transition = "";
-  }, 500);*/
+  }, 500);
 }
 function openCustomiser(){
   updateButtonPosition();
@@ -383,14 +398,200 @@ for(let i = 11; i >= 0; i--){
     if(--i) myLoop(i);
   }, 30);
 })(10);
-*/
+
 
 }
 function deactivateCustomiser(){
 
-}
+}*/
 function check(){
   if(screen.width < 600){
     hideChatbot();
   }
 }
+
+
+function handleScroll(entries, observer) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting && !entry.target.classList.contains('animate')) {
+      entry.target.classList.add('animate');
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+// Set up the Intersection Observer
+var observer = new IntersectionObserver(handleScroll, { threshold: 0.3 });
+
+// Observe each section
+document.querySelectorAll('.newsection').forEach(function(section) {
+  observer.observe(section);
+});
+
+
+
+
+
+
+function handleScroll2(entries, observer) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting && !entry.target.classList.contains('visible')) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+// Set up the Intersection Observer
+var observer2 = new IntersectionObserver(handleScroll2, { threshold: 0.8 });
+
+// Observe each section
+document.querySelectorAll('.shadow-drop-2-center').forEach(function(section) {
+  observer2.observe(section);
+});
+document.querySelectorAll('.slide-top').forEach(function(section) {
+  observer.observe(section);
+});
+
+
+const elts2 = {
+  text1: document.getElementById("text1original"),
+  text2: document.getElementById("text2original")
+};
+
+const texts2 = [
+  "Ersetzt gewöhnlichen Kundensupport",
+  "Kennt euer FAQ",
+  "Sammelt Kontaktdaten",
+  "Empfiehlt Produkte",
+  "Antwortet schnell",
+  "Antwortet zuverlässig",
+  "Basiert auf GPT 3.5 + 4",
+  "Zeigt euch, was eure Kund*innen wollen",
+  "von Felix und Jonathan",
+  ":)"
+];
+
+const morphTime2 = 2;
+const cooldownTime2 = 0.25;
+
+let textIndex2 = texts2.length - 1;
+let time2 = new Date();
+let morph2 = 0;
+let cooldown2 = cooldownTime2;
+
+elts2.text1.textContent = texts2[textIndex2 % texts2.length];
+elts2.text2.textContent = texts2[(textIndex2 + 1) % texts2.length];
+
+function doMorph2() {
+  morph2 -= cooldown2;
+  cooldown2 = 0;
+
+  let fraction2 = morph2 / morphTime2;
+
+  if (fraction2 > 1) {
+      cooldown2 = cooldownTime2;
+      fraction2 = 1;
+  }
+
+  setMorph2(fraction2);
+}
+
+function setMorph2(fraction2) {
+  elts2.text2.style.filter = `blur(${Math.min(8 / fraction2 - 8, 100)}px)`;
+  elts2.text2.style.opacity = `${Math.pow(fraction2, 0.4) * 100}%`;
+
+  fraction2 = 1 - fraction2;
+  elts2.text1.style.filter = `blur(${Math.min(8 / fraction2 - 8, 100)}px)`;
+  elts2.text1.style.opacity = `${Math.pow(fraction2, 0.4) * 100}%`;
+
+  elts2.text1.textContent = texts2[textIndex2 % texts2.length];
+  elts2.text2.textContent = texts2[(textIndex2 + 1) % texts2.length];
+}
+
+function doCooldown2() {
+  morph2 = 0;
+
+  elts2.text2.style.filter = "";
+  elts2.text2.style.opacity = "100%";
+
+  elts2.text1.style.filter = "";
+  elts2.text1.style.opacity = "0%";
+}
+
+function animate2() {
+  requestAnimationFrame(animate2);
+
+  let newTime2 = new Date();
+  let shouldIncrementIndex2 = cooldown2 > 0;
+  let dt2 = (newTime2 - time2) / 1000;
+  time2 = newTime2;
+
+  cooldown2 -= dt2;
+
+  if (cooldown2 <= 0) {
+      if (shouldIncrementIndex2) {
+          textIndex2++;
+      }
+
+      doMorph2();
+  } else {
+      doCooldown2();
+  }
+}
+
+animate2();
+
+
+function wordflickWith3() {
+  var words3 = ['1 Chatbot', 'Unendliche Möglichkeiten', "Personalisierbar"],
+      part3,
+      i3 = 0,
+      offset3 = 0,
+      len3 = words3.length,
+      forwards3 = true,
+      skip_count3 = 0,
+      skip_delay3 = 15,
+      speed3 = 100;
+
+  var wordflick3 = function () {
+    setInterval(function () {
+      if (forwards3) {
+        if (offset3 >= words3[i3].length) {
+          ++skip_count3;
+          if (skip_count3 == skip_delay3) {
+            forwards3 = false;
+            skip_count3 = 0;
+          }
+        }
+      } else {
+        if (offset3 == 0) {
+          forwards3 = true;
+          i3++;
+          offset3 = 0;
+          if (i3 >= len3) {
+            i3 = 0;
+          }
+        }
+      }
+      part3 = words3[i3].substring(0, offset3);
+      if (skip_count3 == 0) {
+        if (forwards3) {
+          offset3++;
+        } else {
+          offset3--;
+        }
+      }
+      document.querySelector('.buildUp').textContent = part3;
+    }, speed3);
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    wordflick3();
+  });
+}
+
+wordflickWith3();
+
+
+
