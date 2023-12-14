@@ -49,6 +49,32 @@ body{
     text-shadow: #acdeec 1px 0 10px;
     margin-bottom: 100px;
   }
+.cookietext{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #084108;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+  .cookietitle{
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    font-size: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .newsection.cookie{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 30;
+    width: 20vw;
+    margin: 0px;
+    padding-bottom: 50px;
+  }
 
 #contain {
     
@@ -1613,6 +1639,9 @@ padding-bottom: 100px;
     }
     h1 > .magic > .magic-text {
         white-space: initial;
+    }
+    .newsection.cookie{
+        width: 90vw;
     }
     .ctamobile{
         margin-left: 5vw;
