@@ -16,23 +16,102 @@
         margin-bottom: 50px;
         font-size: 25px;
        }
+       h1{
+        margin-top: 150px;
+        margin-bottom: 150px;
+        width: 90vw;
+       }
+       label{
+        display: block;
+        margin-bottom: 50px;
+        font-size: 30px;
+       }
+       input{
+
+
+
+
+
+color: black;
+
+    background: rgb(56,56,56);
+    background: linear-gradient(133deg, rgb(177 244 255) 26%, rgb(144 199 216) 77%);
+
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+       }
+       label{
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+       }
+
        
     </style>
     <title>Get your free Chatbot!</title>
 </head>
 <body style="padding-bottom: 130px; height: auto;">
 
-    <h3 style="font-size: 30px; margin-top: 100px; margin-bottom: 50px;">Kennst du jemanden, der unseren Chatbot brauchen könnte? Hast du selber Interesse oder eine Option zum pitchen?</h3>
+    <h1>
+        Lassen Sie uns Ihren 
+        <span class="magic">
+          <span class="magic-star">
+            <svg viewBox="0 0 512 512">
+            <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+            </svg>
+          </span>
+          <span class="magic-star">
+            <svg viewBox="0 0 512 512">
+            <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+            </svg>
+          </span>
+          <span class="magic-star">
+            <svg viewBox="0 0 512 512">
+            <path d="M512 255.1c0 11.34-7.406 20.86-18.44 23.64l-171.3 42.78l-42.78 171.1C276.7 504.6 267.2 512 255.9 512s-20.84-7.406-23.62-18.44l-42.66-171.2L18.47 279.6C7.406 276.8 0 267.3 0 255.1c0-11.34 7.406-20.83 18.44-23.61l171.2-42.78l42.78-171.1C235.2 7.406 244.7 0 256 0s20.84 7.406 23.62 18.44l42.78 171.2l171.2 42.78C504.6 235.2 512 244.6 512 255.1z" />
+            </svg>
+          </span>
+          <span class="magic-text">KI Chatbot</span>
+        </span>
+        einrichten 🚀
+      </h1>
+   
     <form action="https://formsubmit.co/felixwolny1@gmail.com" method="POST">
- 
+
+
+        
         <input type="hidden" name="_subject" value="Vortrag Mainz Info">
-        <input type="text" name="Name" required placeholder="Vorname, Name...">
-        <input type="text" name="Empfehlungs Website" required placeholder="www.meine-empfehlung.de">
-        <input type="text" name="Pitch" required placeholder="Pitch? Ja, Nein?">
-        <input type="email" name="email" required placeholder="deine@email.de">
+        <label>Auf welcher Domain befindet sich Ihre Website?</label>
+        <input type="text" name="Website: " required placeholder= "www.ihre-website.com">
+
+        <label>Wie heißt Ihre Firma?</label>
+        <input type="text" name="Firmenname: " required placeholder= "Firmenname...">
+
+        <label>Was verkaufen Sie primär?</label>
+        <input type="text" name="Firmenname: " required placeholder= "...">
+
+        <label>Haben Sie ein FAQ?</label>
+        <input type="text" name="Haben sie ein FAQ: " required placeholder= "Ja/Nein">
+
+        <label>Welchen Sitebuilder verwenden Sie?</label>
+        <input type="text" name="Sitebuilder: " required placeholder= "Wordpress, Shopify, Wix etc.">
+
+        <label>Wie viele Website-Aufrufe haben Sie monatlich?</label>
+        <input type="text" name="Sitebuilder: " required placeholder= "100-100.000">
+
+        <label>Mit wem sollen wir Kontakt aufnehmen und wie?</label>
+        <input type="text" name="Kontaktperson: " required placeholder= "IT-Abteilung/CEO....">
+        <input type="text" name="Kontaktmedium: " required placeholder= "LinkedIn/Mail (email@mail.de)...">
+
+        <label>Haben sie zusätzlich zu Ihrer Website noch Daten, die der Chatbot kennen sollte?</label>
+        <input type="text" name="Kontaktperson: " required placeholder= "Ja/Nein/Eventuell">
+        <label>Vielen Dank für das Ausfüllen dieses Formulars! Nach dem abschicken werden wir uns mit der gewünschten Person in Verbindung setzen und den Chatbot sobald wie möglich einbauen!</label>
+
+    
 
         <input type="hidden" name="_next" value="https://sellsmartai.github.io/ThankYou.html">
-        <button style="margin-left: auto; margin-right: auto;" type="submit" class="marketingtext3; bottombutton" style="margin-top: 50px;">Abschicken...</button>
+        <button style="margin-left: auto; margin-right: auto;" type="submit" class="marketingtext3; bottombutton" style="margin-top: 50px;">Senden...</button>
    </form>
 </body>
 </html>
