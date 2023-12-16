@@ -68,6 +68,35 @@ for(const star of document.getElementsByClassName("magic-star")) {
 //   timeouts = [];
 //   intervals = [];
 // }
+document.getElementById('shareButton').addEventListener('click', () => {
+  if (navigator.share) {
+      navigator.share({
+          title: 'Your Website Title',
+          text: 'Check out this website!',
+          url: window.location.href
+      })
+      .then(() => console.log('Shared successfully'))
+      .catch((error) => console.error('Error sharing:', error));
+  } else {
+      // Fallback for browsers that do not support Web Share API
+      const tempInput = document.createElement('input');
+      tempInput.value = 'https://sellsmartbot.com';
+      document.body.appendChild(tempInput);
+
+      // Select the input text
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999); // For mobile devices
+
+      // Copy the text to the clipboard
+      document.execCommand('copy');
+      
+      // Remove the temporary input element
+      document.body.removeChild(tempInput);
+      alert('Der Link wurde in ihre Zwischenablage kopiert. Vielen Dank!');
+  }
+});
+
+
 
 
 document.getElementById("openButton").addEventListener('click', function(){
