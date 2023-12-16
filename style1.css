@@ -20,6 +20,19 @@ body{
     height: 165px !important;
     display: block !important;
 }
+.sharebut{
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    color: grey;
+    text-decoration: none;
+    font-size: 18px;
+    transition: scale 200ms;
+}
+.sharebut:hover{
+    cursor: pointer;
+    scale: 1.1;
+}
 @import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
 
 
