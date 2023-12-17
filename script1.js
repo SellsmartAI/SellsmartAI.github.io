@@ -71,8 +71,8 @@ for(const star of document.getElementsByClassName("magic-star")) {
 document.getElementById('shareButton').addEventListener('click', () => {
   if (navigator.share) {
       navigator.share({
-          title: 'Your Website Title',
-          text: 'Check out this website!',
+          title: 'Nona KI Kundensupport',
+          text: '',
           url: window.location.href
       })
       .then(() => console.log('Shared successfully'))
