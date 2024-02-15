@@ -9,7 +9,6 @@
         <meta property="og:image" content="https://sellsmartbot.com/Assets/Logo_1.png">
         <title>KI Kundensupport Chatbot</title>
         <script>
-            console.log(document.referrer);
             function resizeIframe(obj) {
      
               obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
@@ -126,8 +125,10 @@
         </div>
         </div>
      
-        <div class="start">
-            <h1>
+
+        <div class="start" style="z-index: 10;">
+           
+            <h1 style="z-index: 2;">
                 Kundensupport durch einen <br>
                 <span class="magic">
                   <span class="magic-star">
@@ -156,7 +157,7 @@
                 position: relative;
                 bottom: -2.5px;
                 margin-right: 5px;"></a>
-            <iframe id="chatbot" class="nomobilestart" src="https://vorschau.vercel.app" width="auto" height="auto" frameborder="no" allow="geolocation">
+            <embed id="chatbot" class="nomobilestart" src="https://vorschau.vercel.app" width="auto" height="auto" frameborder="no" allow="geolocation">
             <button  type="button" id="openButton" class="none"><img id="openImage" src="https://sellsmartbot.com/Assets/bubble-chat.png" alt="open the Chatbot" /></button>
             <button  type="button" id="closeButton"><img id="openImage" src="https://sellsmartbot.com/Assets/NoChat.png" alt="cose the Chatbot" /></button>
 
@@ -293,7 +294,7 @@
                 <h3 class="head3" style="margin-top: 70px; margin-bottom: 0px;">Farbe und Form komplett anpassbar 👩‍💻</h3>
              </div>
              <div class="newsection id="custom">
-                <p class="customtext">Hol dir deinen Chatbot!</p>
+                <p class="customtext">Holen Sie sich Ihren Chatbot!</p>
                 <a href="getbot.html" class="customlink">Los geht's!</a>
             </div>
         </div>
